@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Phoenix.SubscriptionService.Infrastructure\Phoenix.SubscriptionService.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
