@@ -49,7 +49,7 @@ If this project were to grow in scale:
 
 ## Time Spent
 
-Approximately **1 hour** to implement the core functionality and prepare the diagrams.
+Approximately **2-3 hours** to implement the core functionality and prepare the diagrams.
 
 ---
 
