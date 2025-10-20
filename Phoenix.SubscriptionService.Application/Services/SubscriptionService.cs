@@ -34,8 +34,8 @@ using Phoenix.SubscriptionService.Domain.Interfaces;
                 PlanId = planId,
                 StartDate = System.DateTime.UtcNow,
                 IsActive = true,
-                User = user,   // required
-                Plan = plan    // required
+                User = user,   
+                Plan = plan    
             };
 
             await _subscriptionRepository.AddAsync(subscription);
