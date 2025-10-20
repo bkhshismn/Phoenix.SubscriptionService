@@ -39,4 +39,11 @@
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
     }
+    public class UserProfileDto
+    {
+        public int Id { get; set; }
+        public required string Username { get; set; }
+        public required string Email { get; set; }
+        public List<SubscriptionDto> Subscriptions { get; set; } = new();
+    }
 }

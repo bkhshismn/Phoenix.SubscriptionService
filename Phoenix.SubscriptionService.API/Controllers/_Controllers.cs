@@ -91,15 +91,15 @@ namespace Phoenix.SubscriptionService.API.Controllers
         [HttpPost("subscribe")]
         public async Task<IActionResult> Subscribe([FromQuery] int userId, [FromQuery] int planId)
         {
-            var subscription = await _subscriptionService.SubscribeAsync(userId, planId);
-            return Ok(subscription);
+            var subscriptionDto = await _subscriptionService.SubscribeDtoAsync(userId, planId);
+            return Ok(subscriptionDto);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetUserSubscriptions([FromQuery] int userId)
         {
-            var subscriptions = await _subscriptionService.GetUserSubscriptionsAsync(userId);
-            return Ok(subscriptions);
+            var subscriptionsDto = await _subscriptionService.GetUserSubscriptionsDtoAsync(userId);
+            return Ok(subscriptionsDto);
         }
     }
 }

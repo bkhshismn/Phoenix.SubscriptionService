@@ -9,7 +9,12 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // ===== Add Services =====
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+    options.JsonSerializerOptions.MaxDepth = 64; 
+});
 
 // ===== DbContext (SQLite) =====
 builder.Services.AddDbContext<AppDbContext>(options =>

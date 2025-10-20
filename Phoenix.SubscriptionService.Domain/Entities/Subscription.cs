@@ -1,4 +1,5 @@
-using System; 
+using System;
+using System.Text.Json.Serialization;
 namespace Phoenix.SubscriptionService.Domain.Entities 
 {
     public class Subscription : BaseEntity
@@ -8,6 +9,7 @@ namespace Phoenix.SubscriptionService.Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool IsActive { get; set; }
+        [JsonIgnore]
         public required User User { get; set; }
         public required Plan Plan { get; set; }
     }

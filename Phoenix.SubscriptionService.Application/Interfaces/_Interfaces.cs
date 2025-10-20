@@ -1,4 +1,5 @@
-﻿using Phoenix.SubscriptionService.Domain.Entities;
+﻿using Phoenix.SubscriptionService.Application.DTOs;
+using Phoenix.SubscriptionService.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -19,7 +20,8 @@ namespace Phoenix.SubscriptionService.Application.Interfaces
 
     public interface ISubscriptionService
     {
-        Task<Subscription> SubscribeAsync(int userId, int planId);
-        Task<IEnumerable<Subscription>> GetUserSubscriptionsAsync(int userId);
+        Task<SubscriptionDto> SubscribeDtoAsync(int userId, int planId);
+        Task<List<SubscriptionDto>> GetUserSubscriptionsDtoAsync(int userId);
     }
+
 }
