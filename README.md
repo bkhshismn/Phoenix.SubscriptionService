@@ -59,7 +59,7 @@ AI was used to:
 
 - Generate example DTOs and service interfaces
 - Draft controller structures and method signatures
-- Suggest architecture and design patterns
+
 
 ---
 
